@@ -2,7 +2,7 @@
 ---
 - name: Yum Update
   gather_facts: yes
-  hosts: default
+  hosts: all
 
   tasks:
         - name: Perform yum update of all packages
