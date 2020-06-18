@@ -13,12 +13,8 @@
       register: docker_check
       ignore_errors: yes
 
-    - name: Download the Docker installer
-      get_url:
-        url: https://download.docker.com/linux/centos/docker-ce.repo
-        dest: /root/install_docker.sh
-        mode: 0700
-      when: docker_check.stderr.find('service could not be found') != -1
+    - name: Add docker repo
+      shell: sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
     - name: Install Docker
       shell: sudo dnf install docker-ce --nobest
