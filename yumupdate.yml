@@ -1,7 +1,7 @@
   
 ---
 - name: Yum Update
-  gather_facts: No
+  gather_facts: yes
   hosts: default
 
   tasks:
