@@ -14,7 +14,7 @@
       ignore_errors: yes
 
     - name: Add docker repo
-      shell: sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+      shell: dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
     - name: Install Docker
       shell: sudo dnf install docker-ce --nobest
