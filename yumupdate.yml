@@ -1,7 +1,9 @@
+  
 ---
-# performYumUpdateRebootServer.yml
-# performs yum update and reboots server
-- name: perform yum update / reboot server
+- name: Yum Update
+  gather_facts: No
+  hosts: default
+
   tasks:
         - name: Perform yum update of all packages
           yum:
