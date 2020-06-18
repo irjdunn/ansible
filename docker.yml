@@ -1,6 +1,6 @@
 ---
 - name: Install docker
-  gather_facts: No
+  gather_facts: Yes
   hosts: default
 
   tasks:
